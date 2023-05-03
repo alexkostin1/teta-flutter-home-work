@@ -3,25 +3,6 @@ abstract class Person {
   void decide() => {};
 }
 
-// var Cards = [ // Набор карт
-//     { name: "Ace", weight: 11 },
-//     { name: "King", weight: 10 },
-//     { name: "Queen", weight: 10 },
-//     { name: "Jack", weight: 10 },
-//     { name: "Ten", weight: 10 },
-//     { name: "Nine", weight: 9 },
-//     { name: "Eight", weight: 8 },
-//     { name: "Seven", weight: 7 },
-//     { name: "Six", weight: 6 },
-//     { name: "Five", weight: 5 },
-//     { name: "Four", weight: 4 },
-//     { name: "Three", weight: 3 },
-//     { name: "Two", weight: 2 },
-// ] 
-
-
-// Класс Deck - описывает колоду карт. Содержит методы "создание колоды", "перетасовка колоды", "взять карту из колоды".
-
 class Player extends Person {
   @override
   void decide() {
@@ -56,6 +37,7 @@ class Card {
     String toString() => "Name: $name, Weight: $weight, Suit: $suit \n";
 }
 
+// Класс Deck - описывает колоду карт. Содержит методы "создание колоды", "перетасовка колоды", "взять карту из колоды".
 class Deck {
   void createDeck() {
     print("Колода карт создана!");
@@ -63,6 +45,16 @@ class Deck {
         globalCards.add(Card(name: "Ace", weight: 11, suit: suit));
         globalCards.add(Card(name: "King", weight: 10, suit: suit));
         globalCards.add(Card(name: "Queen", weight: 10, suit: suit));
+        globalCards.add(Card(name: "Jack", weight: 10, suit: suit));
+        globalCards.add(Card(name: "Ten", weight: 10, suit: suit));
+        globalCards.add(Card(name: "Nine", weight: 9, suit: suit));
+        globalCards.add(Card(name: "Eight", weight: 8, suit: suit));
+        globalCards.add(Card(name: "Seven", weight: 7, suit: suit));
+        globalCards.add(Card(name: "Six", weight: 6, suit: suit));
+        globalCards.add(Card(name: "Five", weight: 5, suit: suit));
+        globalCards.add(Card(name: "Four", weight: 4, suit: suit));
+        globalCards.add(Card(name: "Three", weight: 3, suit: suit));
+        globalCards.add(Card(name: "Two", weight: 2, suit: suit));
     });
     print(globalCards);
   }
